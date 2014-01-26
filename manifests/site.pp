@@ -107,4 +107,5 @@ node default {
 
   include mysql
 
+  include osx::global::disable_remote_control_ir_receiver
 }
