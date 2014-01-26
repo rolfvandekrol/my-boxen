@@ -89,6 +89,7 @@ node default {
   }
   
   include chrome
+  include sequel_pro
 
   include sublime_text_2
   sublime_text_2::package { 'Puppet':
