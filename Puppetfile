@@ -56,6 +56,15 @@ github "xquartz",    "1.1.0"
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.
 
+github "wget", "1.0.0"
+github "autoconf", "1.0.0"
+github "libtool", "1.0.0"
+github "pcre", "1.0.0"
+github "libpng", "1.0.0"
+
 github "chrome",     "1.1.2"
 github "spotify",    "1.0.1"
 github "sublime_text_2", "1.1.2"
+
+github "php", "1.1.4.901", :repo => "webbj74/puppet-php"
+github "mysql", "1.2.0"

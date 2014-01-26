@@ -98,4 +98,9 @@ node default {
     source => 'rolfvandekrol/SideBarEnhancements'
   }
 
+  include php::5_4
+  include php::5_3
+
+  include mysql
+
 }
