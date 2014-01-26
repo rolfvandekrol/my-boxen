@@ -109,4 +109,16 @@ node default {
   include mysql
 
   include osx::global::disable_remote_control_ir_receiver
+
+  git::config::global { 'user.email':
+    value  => "${::github_email}"
+  }
+
+  git::config::global { 'user.name':
+    value  => "${::github_name}"
+  }
+
+  osx::recovery_message { 'recovery message':
+    value => "This Mac is owned by Hoppinger and used by ${::github_name}. If it is found, please call +31 10 221 01 90."
+  }
 }
