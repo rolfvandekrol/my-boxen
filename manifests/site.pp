@@ -89,6 +89,8 @@ node default {
   }
   
   include chrome
+  include firefox
+
   include sequel_pro
 
   include sublime_text_2

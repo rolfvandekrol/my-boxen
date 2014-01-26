@@ -19,6 +19,11 @@ GITHUBTARBALL
     dnsmasq (1.0.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-firefox
+  specs:
+    firefox (1.1.7)
+
+GITHUBTARBALL
   remote: boxen/puppet-foreman
   specs:
     foreman (1.0.0)
@@ -153,6 +158,7 @@ DEPENDENCIES
   boxen (= 3.3.4)
   chrome (= 1.1.2)
   dnsmasq (= 1.0.1)
+  firefox (= 1.1.7)
   foreman (= 1.0.0)
   gcc (= 2.0.1)
   git (= 1.2.5)
