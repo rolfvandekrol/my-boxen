@@ -93,6 +93,7 @@ node default {
 
   include sequel_pro
   include sourcetree
+  include zsh
 
   include sublime_text_2
   sublime_text_2::package { 'Puppet':
