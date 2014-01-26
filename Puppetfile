@@ -72,3 +72,4 @@ github "sequel_pro", "1.0.1"
 
 github "php", "1.1.4.901", :repo => "webbj74/puppet-php"
 github "mysql", "1.2.0"
+github "sourcetree", "1.0.0"

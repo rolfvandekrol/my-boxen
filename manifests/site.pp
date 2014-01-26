@@ -92,6 +92,7 @@ node default {
   include firefox
 
   include sequel_pro
+  include sourcetree
 
   include sublime_text_2
   sublime_text_2::package { 'Puppet':
