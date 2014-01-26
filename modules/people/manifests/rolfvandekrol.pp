@@ -10,6 +10,6 @@ class people::rolfvandekrol {
   }
 
   osx::recovery_message { 'recovery message':
-    value => "This Mac is owned by Hoppinger and used by Rolf van de Krol. If it is used, please call +31 10 221 01 90."
+    value => "This Mac is owned by Hoppinger and used by Rolf van de Krol. If it is found, please call +31 10 221 01 90."
   }
 }
