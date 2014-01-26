@@ -62,6 +62,8 @@ github "libtool", "1.0.0"
 github "pcre", "1.0.0"
 github "libpng", "1.0.0"
 
+github "osx",        "2.2.2"
+
 github "chrome",     "1.1.2"
 github "firefox",    "1.1.7"
 github "spotify",    "1.0.1"
