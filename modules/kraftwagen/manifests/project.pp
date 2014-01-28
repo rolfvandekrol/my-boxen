@@ -7,6 +7,10 @@ define kraftwagen::project(
   php::local { "${boxen::config::srcdir}/${name}":
     version => '5.3.27'
   }
+  ruby::local { "${boxen::config::srcdir}/${name}": 
+    version => '1.9.3'
+  }
+  
   include drush
   include drush::kraftwagen
 
