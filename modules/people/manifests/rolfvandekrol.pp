@@ -24,4 +24,5 @@ class people::rolfvandekrol {
 
   include projects::anwbmotor
   include projects::gs1
+  include projects::mattheus
 }
