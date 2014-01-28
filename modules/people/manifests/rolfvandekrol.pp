@@ -23,4 +23,5 @@ class people::rolfvandekrol {
   include drush::kraftwagen
 
   include projects::anwbmotor
+  include projects::gs1
 }
