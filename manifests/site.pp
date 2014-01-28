@@ -93,7 +93,7 @@ node default {
 
   include sequel_pro
   include sourcetree
-  include zsh
+  include iterm2::dev
 
   include sublime_text_2
   sublime_text_2::package { 'Puppet':
@@ -102,11 +102,6 @@ node default {
   sublime_text_2::package { 'SideBarEnhancements':
     source => 'rolfvandekrol/SideBarEnhancements'
   }
-
-  include php::5_4
-  include php::5_3
-
-  include mysql
 
   include osx::global::disable_remote_control_ir_receiver
 
