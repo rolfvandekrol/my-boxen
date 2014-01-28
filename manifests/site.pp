@@ -106,11 +106,14 @@ node default {
   include osx::global::disable_remote_control_ir_receiver
 
   git::config::global { 'user.email':
-    value  => "${::github_email}"
+    value => "${::github_email}"
   }
 
   git::config::global { 'user.name':
-    value  => "${::github_name}"
+    value => "${::github_name}"
+  }
+  git::config::global { 'push.default':
+    value => 'simple'
   }
 
   osx::recovery_message { 'recovery message':
