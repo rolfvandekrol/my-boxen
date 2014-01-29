@@ -10,6 +10,11 @@ define kraftwagen::project(
   ruby::local { "${boxen::config::srcdir}/${name}": 
     version => '1.9.3'
   }
+  ruby::gem { "compass for 1.9.3 (${name})":
+    gem     => 'compass',
+    ruby    => '1.9.3',
+    version => '~> 0.12.2'
+  }
   
   include drush
   include drush::kraftwagen
