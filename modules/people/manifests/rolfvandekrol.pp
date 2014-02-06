@@ -41,4 +41,5 @@ class people::rolfvandekrol {
 
   # Own projects
   include projects::mattheus
+  include projects::gollum_sandbox
 }
