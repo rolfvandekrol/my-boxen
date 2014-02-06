@@ -164,6 +164,11 @@ GITHUBTARBALL
     zsh (1.0.0)
 
 GITHUBTARBALL
+  remote: haelmy/puppet-ohmyzsh
+  specs:
+    ohmyzsh (0.0.1)
+
+GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
   specs:
     inifile (1.0.0)
@@ -203,6 +208,7 @@ DEPENDENCIES
   mysql (= 1.2.0)
   nginx (= 1.4.2)
   nodejs (= 3.3.0)
+  ohmyzsh (= 0.0.1)
   openssl (= 1.0.0)
   osx (= 2.2.2)
   pcre (= 1.0.0)

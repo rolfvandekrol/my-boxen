@@ -78,3 +78,4 @@ github "sourcetree", "1.0.0"
 github "iterm2", "1.0.6"
 
 github "zsh", "1.0.0"
+github "ohmyzsh", "0.0.1", :repo => "haelmy/puppet-ohmyzsh"

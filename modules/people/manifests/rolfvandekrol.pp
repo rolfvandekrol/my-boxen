@@ -2,6 +2,16 @@ class people::rolfvandekrol {
   include spotify
 
   include zsh
+  include ohmyzsh
+  file { "/Users/${::luser}/.zshrc":
+    source => "file:///Users/${::luser}/.oh-my-zsh/templates/zshrc.zsh-template",
+    require => Repository['robbyrussell/oh-my-zsh'],
+  }
+
+  file { "/Users/${::luser}/.oh-my-zsh/lib/00-boxen.zsh":
+    content => "export LC_ALL=en_US.UTF-8\nexport LANG=en_US.UTF-8\n\nsource ${boxen::config::home}/env.sh",
+    require => Repository['robbyrussell/oh-my-zsh'],
+  }
 
   include flux
   include skype
