@@ -74,6 +74,17 @@ node default {
   include ruby::1_9_3
   include ruby::2_0_0
 
+  # Install useful rbenv plugins
+  ruby::plugin { 'rbenv-vars':
+    ensure => 'v1.2.0',
+    source  => 'sstephenson/rbenv-vars'
+  }
+
+  ruby::plugin { 'rbenv-gemset':
+    ensure => 'v0.5.4',
+    source  => 'jf/rbenv-gemset'
+  }
+
   # common, useful packages
   package {
     [
