@@ -72,7 +72,7 @@ github "sequel_pro", "1.0.1"
 github "flux", "0.0.1", :repo => "technicalpickles/puppet-flux"
 github "skype", "1.0.8"
 
-github "php", "1.1.4.1000", :repo => "rolfvandekrol/puppet-php"
+github "php", "1.1.4.1006", :repo => "rolfvandekrol/puppet-php"
 github "mysql", "1.2.0"
 github "sourcetree", "1.0.0"
 github "iterm2", "1.0.6"
