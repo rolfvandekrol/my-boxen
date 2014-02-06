@@ -38,6 +38,7 @@ class people::rolfvandekrol {
   include projects::anwbmotor
   include projects::gs1
   include projects::vanoord_greetings
+  include projects::radtech
 
   # Own projects
   include projects::mattheus
