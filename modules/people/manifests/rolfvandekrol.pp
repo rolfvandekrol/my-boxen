@@ -37,6 +37,7 @@ class people::rolfvandekrol {
   # Hoppinger projects
   include projects::anwbmotor
   include projects::gs1
+  include projects::vanoord_greetings
 
   # Own projects
   include projects::mattheus
