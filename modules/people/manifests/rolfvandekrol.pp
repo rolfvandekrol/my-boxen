@@ -1,6 +1,5 @@
 class people::rolfvandekrol {
-  include spotify
-
+  # My shell
   include zsh
   include ohmyzsh
   file { "/Users/${::luser}/.zshrc":
@@ -13,9 +12,12 @@ class people::rolfvandekrol {
     require => Repository['robbyrussell/oh-my-zsh'],
   }
 
+  # Apps
   include flux
   include skype
+  include spotify
 
+  # OS X settings
   include osx::global::expand_print_dialog
   include osx::global::expand_save_dialog
   include osx::global::disable_autocorrect
@@ -24,7 +26,7 @@ class people::rolfvandekrol {
   include osx::disable_app_quarantine
   include osx::no_network_dsstores
 
-
+  # PHP / Drupal development environment
   include php::5_4
   include php::5_3
 
@@ -32,7 +34,10 @@ class people::rolfvandekrol {
   include drush
   include drush::kraftwagen
 
+  # Hoppinger projects
   include projects::anwbmotor
   include projects::gs1
+
+  # Own projects
   include projects::mattheus
 }

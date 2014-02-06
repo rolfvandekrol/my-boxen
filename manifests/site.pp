@@ -99,9 +99,6 @@ node default {
   sublime_text_2::package { 'Puppet':
     source => 'eklein/sublime-text-puppet'
   }
-  sublime_text_2::package { 'SideBarEnhancements':
-    source => 'rolfvandekrol/SideBarEnhancements'
-  }
 
   include osx::global::disable_remote_control_ir_receiver
 
