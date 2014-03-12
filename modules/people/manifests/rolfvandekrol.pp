@@ -34,13 +34,24 @@ class people::rolfvandekrol {
   include drush
   include drush::kraftwagen
 
-  # Hoppinger projects
-  include projects::anwbmotor
-  include projects::gs1
-  include projects::vanoord_greetings
-  include projects::radtech
+  repository { "${boxen::config::srcdir}/DrupalUpdater":
+    source => "git@github.com:hoppinger/DrupalUpdater.git"
+  }
 
-  # Own projects
-  include projects::mattheus
-  include projects::gollum_sandbox
+  include projects::all
+
+  # # Hoppinger projects
+  # include projects::anwbmotor
+  # include projects::gs1
+  # include projects::vanoord_greetings
+  # include projects::radtech
+  # include projects::omroepwest
+  # include projects::hvc
+  # include projects::wvhg
+
+  # # Own projects
+  # include projects::mattheus
+  # include projects::gollum_sandbox
+  # include projects::tcc
+  # include projects::mvdk
 }

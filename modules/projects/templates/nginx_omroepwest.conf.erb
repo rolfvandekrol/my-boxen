@@ -8,6 +8,13 @@ server {
 
   client_max_body_size 50M;
 
+  location ~ ^/embed/hockey/embed\.js\.php.*$ {
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME <%= scope.lookupvar "boxen::config::srcdir" %>/<%= @name %>/httpdocs/embed/hockey/embed.js.php;
+    fastcgi_param SCRIPT_NAME /embed/hockey/embed.js.php;
+    fastcgi_pass unix:/opt/boxen/data/project-sockets/omroepwest;
+  }
+
   location ~ ^/$ {
     try_files $uri @drupal;
   }

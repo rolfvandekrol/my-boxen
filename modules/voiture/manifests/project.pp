@@ -1,6 +1,7 @@
 
 define voiture::project(
-  $source
+  $source,
+  $nginx_template = 'voiture/nginx.conf.erb',
 ) {
   include mysql
   include voiture::base
@@ -17,12 +18,16 @@ define voiture::project(
     command => "svn co ${source} ${boxen::config::srcdir}/${name}",
     creates => "${boxen::config::srcdir}/${name}"
   }
+  php::local { "${boxen::config::srcdir}/${name}":
+    version => '5.3.27',
+    require => Exec["svn checkout ${name}"]
+  }
 
   include nginx::config
   include nginx
 
   file { "${nginx::config::sitesdir}/${name}.conf":
-    content => template('voiture/nginx.conf.erb'),
+    content => template($nginx_template),
     require => File[$nginx::config::sitesdir],
     notify  => Service['dev.nginx'],
   }
