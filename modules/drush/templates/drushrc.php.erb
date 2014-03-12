@@ -1,3 +1,5 @@
 <?php
 
-$options['include'] = array('<%= scope.lookupvar "boxen::config::home" %>/drush/commands');
+if (defined('DRUSH_VERSION') && version_compare(DRUSH_VERSION, '6', '>=')) {
+  $options['include'] = array('<%= scope.lookupvar "boxen::config::home" %>/drush/commands');
+}
