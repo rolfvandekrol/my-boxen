@@ -106,10 +106,11 @@ node default {
   include sourcetree
   include iterm2::dev
 
-  include sublime_text_2
-  sublime_text_2::package { 'Puppet':
-    source => 'eklein/sublime-text-puppet'
-  }
+  include sublime_text_3
+  include sublime_text_3::package_control
+  # sublime_text_2::package { 'Puppet':
+  #   source => 'eklein/sublime-text-puppet'
+  # }
 
   include osx::global::disable_remote_control_ir_receiver
 
