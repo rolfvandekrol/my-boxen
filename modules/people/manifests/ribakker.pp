@@ -34,19 +34,4 @@ class people::ribakker {
   include drush::kraftwagen
 
   include projects::sp
-
-  # # Hoppinger projects
-  # include projects::anwbmotor
-  # include projects::gs1
-  # include projects::vanoord_greetings
-  # include projects::radtech
-  # include projects::omroepwest
-  # include projects::hvc
-  # include projects::wvhg
-
-  # # Own projects
-  # include projects::mattheus
-  # include projects::gollum_sandbox
-  # include projects::tcc
-  # include projects::mvdk
 }
