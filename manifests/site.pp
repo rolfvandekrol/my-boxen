@@ -58,7 +58,8 @@ node default {
   include hub
   include nginx
 
-  include ruby::1_9_3
+  # default ruby versions
+  ruby::version { '1.9.3': }
 
   # Install useful rbenv plugins
   ruby::plugin { 'rbenv-vars':
