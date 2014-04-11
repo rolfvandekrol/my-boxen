@@ -58,21 +58,7 @@ node default {
   include hub
   include nginx
 
-  # fail if FDE is not enabled
-  if $::root_encrypted == 'no' {
-    # fail('Please enable full disk encryption and try again')
-  }
-
-  # node versions
-  include nodejs::v0_6
-  include nodejs::v0_8
-  include nodejs::v0_10
-
-  # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
   include ruby::1_9_3
-  include ruby::2_0_0
 
   # Install useful rbenv plugins
   ruby::plugin { 'rbenv-vars':
@@ -106,13 +92,6 @@ node default {
   include sourcetree
   include iterm2::dev
 
-  include sublime_text_3
-  include sublime_text_3::package_control
-  # sublime_text_2::package { 'Puppet':
-  #   source => 'eklein/sublime-text-puppet'
-  # }
-
-  include osx::global::disable_remote_control_ir_receiver
 
   git::config::global { 'user.email':
     value => "${::github_email}"
@@ -123,9 +102,5 @@ node default {
   }
   git::config::global { 'push.default':
     value => 'simple'
-  }
-
-  osx::recovery_message { 'recovery message':
-    value => "This Mac is owned by Hoppinger and used by ${::github_name}. If it is found, please call +31 10 221 01 90."
   }
 }
