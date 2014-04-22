@@ -15,4 +15,5 @@ class people::ribakker {
   include drush::kraftwagen
 
   include projects::sp
+  include projects::biennale
 }
