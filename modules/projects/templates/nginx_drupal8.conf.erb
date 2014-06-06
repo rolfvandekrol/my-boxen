@@ -1,0 +1,33 @@
+server {
+  access_log <%= scope.lookupvar "nginx::config::logdir" %>/drupal8.access.log main;
+  listen 80;
+  root <%= scope.lookupvar "boxen::config::srcdir" %>/drupal8;
+  server_name <%= @server_name %> *.<%= @server_name %>;
+
+  client_max_body_size 50M;
+
+  location  /  {
+    try_files $uri @rewrite;
+  }
+  location @rewrite {
+    rewrite ^/(.*)$ /index.php?q=$1;
+  }
+
+  error_page 500 502 503 504 /50x.html;
+  location = /50x.html {
+    root html;
+  }
+
+  location ~ \.php$ {
+    fastcgi_split_path_info ^(.+\.php)(/.+)$;
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+    fastcgi_pass unix:<%= scope.lookupvar "boxen::config::socketdir" %>/drupal8;
+  }
+  location ~ ^/sites/.*/files/styles/ {
+    try_files $uri @rewrite;
+  }
+  location ~ /\.ht {
+    deny all;
+  }
+}
