@@ -76,6 +76,7 @@ github "sublime_text_3", "1.0.2", :repo => "jozefizso/puppet-sublime_text_3"
 github "sequel_pro", "1.0.1"
 github "flux", "0.0.1", :repo => "technicalpickles/puppet-flux"
 github "skype", "1.0.8"
+github "inkscape", "1.0.3"
 
 github "php", "1.1.4.1006", :repo => "rolfvandekrol/puppet-php"
 github "mysql", "1.2.0"

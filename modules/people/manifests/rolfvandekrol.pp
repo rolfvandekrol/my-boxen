@@ -13,6 +13,8 @@ class people::rolfvandekrol {
   include drush
   include drush::kraftwagen
 
+  include inkscape
+
   repository { "${boxen::config::srcdir}/DrupalUpdater":
     source => "git@github.com:hoppinger/DrupalUpdater.git"
   }
