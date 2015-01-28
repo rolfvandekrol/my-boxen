@@ -9,6 +9,15 @@ class people::rolfvandekrol {
   include php::5_4
   include php::5_3
 
+  require php::config
+  require php::5_3_27
+  $php = "5.3.27"
+
+  file { "${php::config::configdir}/${php}/conf.d/uploads.ini":
+    content => template("people/uploads.ini.erb"),
+    notify => Service["dev.php-fpm.5.3.27"],
+  }
+
   include mysql
   include drush
   include drush::kraftwagen
