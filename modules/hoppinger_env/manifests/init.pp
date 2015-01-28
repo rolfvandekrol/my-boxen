@@ -8,6 +8,7 @@ class hoppinger_env {
   ruby::version { '2.0.0': }
   ruby::version { '2.1.0': }
   ruby::version { '2.1.1': }
+  ruby::version { '2.1.2': }
   
   include sublime_text_3
   include sublime_text_3::package_control
