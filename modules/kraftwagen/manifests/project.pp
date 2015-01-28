@@ -2,6 +2,7 @@
 define kraftwagen::project(
   $source,
   $server_name   = "${name}.dev",
+  $server_aliases = "",
 ) {
   include boxen::config
   php::local { "${boxen::config::srcdir}/${name}":
