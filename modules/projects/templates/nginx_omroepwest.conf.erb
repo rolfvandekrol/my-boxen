@@ -4,7 +4,8 @@ server {
 
   listen 80;
   root <%= scope.lookupvar "boxen::config::srcdir" %>/<%= @name %>/httpdocs;
-  server_name <%= @hostname %> *.<%= @hostname %>;
+  # server_name <%= @hostname %> *.<%= @hostname %> <%= @hostname %>.*.xip.io;
+  server_name "~^(.+\.)?omroepwest\.dev((\.\d+){4}\.xip\.io)?$" omroepwest.nl *.omroepwest.nl;
 
   client_max_body_size 50M;
 

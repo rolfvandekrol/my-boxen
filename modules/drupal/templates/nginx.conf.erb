@@ -1,7 +1,7 @@
 server {
-  access_log <%= scope.lookupvar "nginx::config::logdir" %>/drupal8.access.log main;
+  access_log <%= scope.lookupvar "nginx::config::logdir" %>/<%= @name %>.access.log main;
   listen 80;
-  root <%= scope.lookupvar "boxen::config::srcdir" %>/d8comp;
+  root <%= scope.lookupvar "boxen::config::srcdir" %>/<%= @name %>/httpdocs;
   server_name <%= @server_name %> *.<%= @server_name %>;
 
   client_max_body_size 50M;
@@ -22,7 +22,7 @@ server {
     fastcgi_split_path_info ^(.+\.php)(/.+)$;
     include fastcgi_params;
     fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-    fastcgi_pass unix:<%= scope.lookupvar "boxen::config::socketdir" %>/drupal8;
+    fastcgi_pass unix:<%= scope.lookupvar "boxen::config::socketdir" %>/<%= @name %>;
   }
   location ~ ^/sites/.*/files/styles/ {
     try_files $uri @rewrite;

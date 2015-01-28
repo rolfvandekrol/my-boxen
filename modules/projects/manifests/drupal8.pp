@@ -10,15 +10,6 @@ class projects::drupal8 {
     version => '5.4.17',
     require => File["${boxen::config::srcdir}/drupal8"]
   }
-  ruby::local { "${boxen::config::srcdir}/drupal8": 
-    version => '1.9.3',
-    require => File["${boxen::config::srcdir}/drupal8"]
-  }
-  ruby::gem { "compass for 1.9.3 (drupal8)":
-    gem     => 'compass',
-    ruby    => '1.9.3',
-    version => '~> 0.12.2'
-  }
   
   include drush
 

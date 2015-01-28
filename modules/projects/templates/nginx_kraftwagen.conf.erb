@@ -1,0 +1,6 @@
+server {
+  access_log <%= scope.lookupvar "nginx::config::logdir" %>/drupal8.access.log main;
+  listen 80;
+  root <%= scope.lookupvar "boxen::config::srcdir" %>/kraftwagen/kraftwagen.github.com;
+  server_name <%= @server_name %> *.<%= @server_name %>;
+}
