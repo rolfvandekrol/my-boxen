@@ -55,6 +55,8 @@ export GOPATH=$HOME/src/go
 export PATH=$HOME/bin:$HOME/src/go/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export DYLD_FALLBACK_LIBRARY_PATH="/usr/lib/:$BOXEN_HOME/homebrew/lib:$DYLD_FALLBACK_LIBRARY_PATH"
+
 # # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
