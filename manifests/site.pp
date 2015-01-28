@@ -61,16 +61,16 @@ node default {
   # default ruby versions
   ruby::version { '1.9.3': }
 
-  # Install useful rbenv plugins
-  ruby::plugin { 'rbenv-vars':
-    ensure => 'v1.2.0',
-    source  => 'sstephenson/rbenv-vars'
-  }
+  # # Install useful rbenv plugins
+  # ruby::plugin { 'rbenv-vars':
+  #   ensure => 'v1.2.0',
+  #   source  => 'sstephenson/rbenv-vars'
+  # }
 
-  ruby::plugin { 'rbenv-gemset':
-    ensure => 'v0.5.4',
-    source  => 'jf/rbenv-gemset'
-  }
+  # ruby::plugin { 'rbenv-gemset':
+  #   ensure => 'v0.5.4',
+  #   source  => 'jf/rbenv-gemset'
+  # }
 
   # common, useful packages
   package {
